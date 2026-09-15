@@ -9,13 +9,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: "Convert Notebook"
         run: |
+          pip install jupter
+          pip instrall -r requirements.txt
+          jupter nbconvert --to html --execute analysis.ipynb --no-input
           ## run jupyter and convert to html
       - name: 'Send Mail'
         uses: dawidd6/action-send-mail@v18
         with:
           server_address: smtp.gmail.com
-          username: 
-          password: 
+          username: elizabethdbagley2@gmail.com
+          password: ${{secrets.MAIL_DATA_DAYS}}
           subject: Github Actions Test
-          to: ## relevant email addresses
-          html_body: file://
+          to: ebagley@clevelandohio.gov
+          html_body: file://analysis.html
