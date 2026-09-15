@@ -20,6 +20,6 @@ jobs:
           username: elizabethdbagley2@gmail.com
           password: ${{secrets.MAIL_DATA_DAYS}}
           subject: Github Actions Test
-          to: ebagley@clevelandohio.gov
+          to: elibagley2@gmail.com
           from: example@example.com
           html_body: file://analysis.html
