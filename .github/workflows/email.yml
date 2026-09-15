@@ -21,4 +21,5 @@ jobs:
           password: ${{secrets.MAIL_DATA_DAYS}}
           subject: Github Actions Test
           to: ebagley@clevelandohio.gov
+          from: example@example.com
           html_body: file://analysis.html
